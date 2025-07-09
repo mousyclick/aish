@@ -11,7 +11,7 @@ spring:
     ollama:
       chat:
         options:
-          model: deepseek-r1:14b
+          model: deepseek-r1:1.5b
     openai:
       api-key: ${OPENAI_API_KEY}
       chat:
