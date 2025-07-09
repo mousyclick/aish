@@ -1,7 +1,15 @@
-# MousyClick AI Shell
+# 🤖 mousyclick's AI shell
 
-Explore AI APIs
+> ⚠️ **WORK IN PROGRESS**  
+> This project is currently under development and is part of a YouTube tutorial series.  
+> [Follow along on YouTube](https://www.youtube.com/playlist?list=PLtoeaLo7A_tJtycgPYlSXTE-pl_OE_pph)
 
+Sample: gpt-4o-mini-2024-07-08
+![gpt-4o-mini-2024-07-08.png](assets/gpt-4o-mini-2024-07-08.png)
+
+Sample: deepseek-r1:1.5b
+![deepseek-r1_15b.png](assets/deepseek-r1_15b.png)
+ 
 ## Secret configuration .env file
 
 Be sure to add the `.env` to `.gitignore` and never check in this file
@@ -32,6 +40,7 @@ ollama run deepseek-r1:14b
 ### Reference Documentation
 For further reference, please consider the following sections:
 
+* [GitHub Repository](https://github.com/mousyclick/aish)
 * [The Software Development Kit Manager](https://sdkman.io/)
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 * [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.4.7/maven-plugin)
