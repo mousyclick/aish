@@ -1,0 +1,30 @@
+spring:
+  main:
+    banner-mode: "off"
+  application:
+    name: mousyclick-aish
+  shell:
+    interactive:
+      enabled: true
+  ai:
+    model: ollama
+    ollama:
+      chat:
+        options:
+          model: deepseek-r1:14b
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini
+
+logging:
+  level:
+    root: WARN
+
+shell:
+  out:
+    info: CYAN
+    success: GREEN
+    warning: YELLOW
+    error: RED
