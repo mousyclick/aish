@@ -4,6 +4,7 @@ import org.jline.terminal.Terminal;
 import org.jline.utils.AttributedStringBuilder;
 import org.jline.utils.AttributedStyle;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.util.StringUtils;
 
 public class ShellHelper {
 
@@ -66,7 +67,13 @@ public class ShellHelper {
     }
 
     public void write(String message, PromptColor color) {
+        if (!StringUtils.hasText(message)) return;
         terminal.writer().write(getColored(message, color));
+        terminal.flush();
+    }
+
+    public void newline() {
+        print("", null);
     }
 
     public void print(String message, PromptColor color) {
