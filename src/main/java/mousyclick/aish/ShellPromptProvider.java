@@ -8,8 +8,18 @@ import org.springframework.stereotype.Component;
 @Component
 public class ShellPromptProvider implements PromptProvider {
 
+    private final ChatClientRegistry registry;
+
+    public ShellPromptProvider(ChatClientRegistry registry) {
+        this.registry = registry;
+    }
+
     @Override
     public AttributedString getPrompt() {
-        return new AttributedString(String.format("%s $ ", ""), AttributedStyle.DEFAULT.foreground(AttributedStyle.YELLOW));
+        var activeProvider = registry.getCurrentProviderName();
+        return new AttributedString(
+                String.format("%s $ ", activeProvider),
+                AttributedStyle.DEFAULT.foreground(AttributedStyle.YELLOW)
+        );
     }
 }

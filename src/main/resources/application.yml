@@ -2,12 +2,14 @@ spring:
   main:
     banner-mode: "off"
   application:
-    name: mousyclick-aish
+    name: aish
   shell:
+    history:
+      enabled: false
     interactive:
       enabled: true
   ai:
-    model: ollama
+    provider: OLLAMA
     ollama:
       chat:
         options:
